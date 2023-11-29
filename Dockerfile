@@ -25,7 +25,6 @@ WORKDIR /usr/src/app
 
 COPY --from=BUILD_IMAGE /usr/src/app .
 
-
 EXPOSE 7077
 
 CMD [ "yarn", "start" ]
