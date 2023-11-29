@@ -64,6 +64,13 @@ const startServer = () => {
   // ROUTES
   appRoutes(app);
 
+  // DEFAULT
+  app.get("/", (req, res) => {
+    return res.status(200).json({
+      message: "API OK!! 👍🏽📌",
+    });
+  });
+
   // HEALTH CHECK
   app.get("/health", (req, res) => {
     return res.status(200).json({
